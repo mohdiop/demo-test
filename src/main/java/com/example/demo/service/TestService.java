@@ -23,8 +23,8 @@ public class TestService {
         return testRepository.save(test);
     }
 
-    public String supprimerTest(Test test){
-        testRepository.delete(test);
+    public String supprimerTest(int id){
+        testRepository.deleteById(id);
         return "Test supprimé avec succès!";
     }
 

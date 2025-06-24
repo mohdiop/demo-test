@@ -40,4 +40,25 @@ public class TestController {
     ) {
         return testService.rechercherParIdEtDescription(id, description);
     }
+
+    @GetMapping("/description")
+    public Test rechercherParIdEtDescription(
+            @RequestParam String description
+    ) {
+        return testService.rechercherParDescription(description);
+    }
+
+    @PutMapping
+    public Test modifierUnTest(
+            @RequestBody Test test
+    ) {
+        return testService.modifierTest(test);
+    }
+
+    @DeleteMapping("/{id}")
+    public String supprimerUnTest(
+            @PathVariable int id
+    ) {
+        return testService.supprimerTest(id);
+    }
 }
