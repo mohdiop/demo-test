@@ -1,7 +1,9 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "test_table")
 public class Test {
@@ -9,20 +11,4 @@ public class Test {
     @Id
     private int id;
     private String description;
-
-    public int getId() {
-        return id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
 }
